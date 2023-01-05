@@ -1,6 +1,17 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { CloseOutlined } from '@ant-design/icons';
 
+//Global로 사용하면 클래스명 바뀌지 않고 그대로 사용할 수 있다.
+//상위에 transform 이 들어가면 position을 잡지못하는 브라우저 버그가 있다.
+//transform을 해제해 주어야하기 때문에
+/*
+// 부모 속성
+ .ant-card-cover {
+    transform: none !important;
+  }
+*/
+
+
 export const Global = createGlobalStyle`
   .slick-slide {
     display: inline-block;
@@ -47,6 +58,11 @@ export const CloseBtn = styled(CloseOutlined)`
   line-height: 14px;
   cursor: pointer;
 `;
+
+// '>' 기호를 활용하면 .div의 바로 다음에오는 '자식 태그'에게만 
+// 띄어쓰기를 활용하면 .div의 바로 다음에오는 모든 하위요소에 스타일링 가능
+
+
 
 export const Indicator = styled.div`
   text-align: center;

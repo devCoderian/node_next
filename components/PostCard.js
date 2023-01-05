@@ -60,7 +60,7 @@ const PostCard = ({ post }) => {
           liked
             ? <HeartTwoTone twoToneColor="#eb2f96" key="heart" onClick={onToggleLike} />
             : <HeartOutlined key="heart" onClick={onToggleLike} />,
-          //댓글
+          // 댓글
           <MessageOutlined key="message" onClick={onToggleComment} />,
           // 더보기
           <Popover 
@@ -87,11 +87,9 @@ const PostCard = ({ post }) => {
           description={<PostCardContent postData={post.content} />}
         />
       </Card>
-      
-      <CommentForm post = {post} />
       {commentFormOpened && (
         <>
-          <CommentForm post={post} />
+        
           <List
             header={`${dummyComments.length} 댓글`}
             itemLayout="horizontal"
@@ -110,6 +108,7 @@ const PostCard = ({ post }) => {
               </li>
             )}
           />
+          
         </>
       )}
     </CardWrapper>
