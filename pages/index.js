@@ -29,7 +29,6 @@ const Home = () => {
   const {isLoggedIn} = useSelector((state) => state.user);
   const {mainPosts} = useSelector((state) => state.post);
 
-  console.log(mainPosts);
   return (
     <AppLayout>
       {isLoggedIn && <PostForm />}

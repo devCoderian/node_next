@@ -30,7 +30,8 @@ import { combineReducers } from 'redux';
 
 
 //const rootReducer = combineReducers({ user,post }); //HYDRATE(넥스트 서버사이드 렌더링을 위해) 넣기전 react에서만 사용
- const rootReducer = combineReducers({
+ // combine reducer => SSR을 위해 HYDRATE 상태를 포함하는 reduxer가 포함시키는 부분이다. 
+const rootReducer = combineReducers({
     //서버사이드 렌더링을 위헤
     index: (state = {}, action) => {
         switch(action.type) {

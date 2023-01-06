@@ -28,3 +28,24 @@ NodeBird.propTypes = {
 
 export default wrapper.withRedux(NodeBird);
 //export default NodeBird;
+
+// Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+// at Overflow (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/rc-overflow/lib/Overflow.js:42:32)
+// at InheritableContextProvider (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/rc-menu/lib/context/MenuContext.js:40:23)
+// at Menu (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/rc-menu/lib/Menu.js:80:32)
+// at InternalMenu (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/antd/lib/menu/index.js:77:37)
+// at Menu (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/antd/lib/menu/index.js:176:37)
+// at div
+// at AppLayout (webpack-internal:///./components/AppLayout.js:34:22)
+// at Home (webpack-internal:///./pages/index.js:46:85)
+// at NodeBird (webpack-internal:///./pages/_app.js:22:21)
+// at Provider (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/react-redux/lib/components/Provider.js:19:3)
+// at Wrapper (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/next-redux-wrapper/lib/index.js:184:35)
+// at InnerApp
+// at StyleRegistry (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/styled-jsx/dist/stylesheet-registry.js:231:34)
+// at AppContainer (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/next/dist/server/render.js:340:29)
+// at AppContainerWithIsomorphicFiberStructure (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/next/dist/server/render.js:370:57)
+// at div
+// at Body (/Users/hn/Downloads/react-nodebird-master/ch2/front/node_modules/next/dist/server/render.js:638:21)
+
+// 워닝은 무시하셔도 됩니다. antd 내부적으로 쓰고있어서 방법이 없습니다. ssr할때 antd 화면이 필요가 없어서 실제 영향은 없습니다.
